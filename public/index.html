@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mafia System - SA-MP</title>
+    <style>
+        body { background-color: #0d0d0d; color: #f0f0f0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; }
+        h1 { text-align: center; color: #ff3333; letter-spacing: 2px; text-shadow: 2px 2px 5px #000; margin-bottom: 30px;}
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 900px; margin: 0 auto; }
+        .box { background: #161616; width: 350px; padding: 30px; border-radius: 8px; box-shadow: 0px 5px 15px rgba(0,0,0,0.7); border: 1px solid #222; }
+        .box h2 { margin-top: 0; color: #fff; border-bottom: 2px solid #ff3333; padding-bottom: 10px; font-size: 20px;}
+        input { width: 100%; padding: 12px; margin: 12px 0; background: #222; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; }
+        input:focus { border-color: #ff3333; outline: none; }
+        button { width: 100%; padding: 12px; background: #ff3333; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px; text-transform: uppercase; transition: 0.2s; }
+        button:hover { background: #cc0000; }
+        .btn-reg { background: #333; border: 1px solid #555; }
+        .btn-reg:hover { background: #444; }
+        p { font-size: 12px; color: #888; margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+    <h1>🌐 BASE DE DATOS DE LA MAFIA 🌐</h1>
+
+    <div class="container">
+        <div class="box">
+            <h2>Ingresar al Sistema</h2>
+            <form action="/login" method="POST">
+                <input type="text" name="username" placeholder="Nombre de Usuario (IC)" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit">INICIAR SESIÓN</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <h2>Registrar Nuevo Miembro</h2>
+            <form action="/registro" method="POST">
+                <input type="text" name="username" placeholder="Nombre de Usuario (IC)" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <div style="margin-top: 15px; padding-top:10px; border-top: 1px dashed #333;">
+                    <p>⚠️ Solo para Altos Rangos / Administradores:</p>
+                    <input type="password" name="codigoAdmin" placeholder="Código de Invitación Admin">
+                </div>
+                <button type="submit" class="btn-reg">CREAR CUENTA</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
